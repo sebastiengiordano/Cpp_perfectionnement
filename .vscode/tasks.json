@@ -1,0 +1,61 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe générer le fichier actif",
+            "command": "C:/Outils/msys64/usr/bin/g++.exe",
+            "args": [
+                "-g3",
+                "-Wall",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compilateur : C:/Outils/msys64/usr/bin/g++.exe"
+        },
+        {
+            "type": "shell",
+            "label": "Run C/C++: g++.exe",
+            "command": "C:/Outils/msys64/usr/bin/g++.exe -g3 -Wall ${file} -o ${fileDirname}/${fileBasenameNoExtension}.exe &&${fileDirname}/${fileBasenameNoExtension}.exe",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "compilateur : C:/Outils/msys64/usr/bin/g++.exe"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:/Outils/msys64/usr/bin/g++.exe",
+            "args": [
+                "-std=c++11",
+                "-O2",
+                "-Wall",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
