@@ -83,7 +83,7 @@ public:
     }
 
     void introduce() const {
-        std::cout << "Bonjour je suis " << firstname << " " << lastname << ". Je suis nÃ© en " << birthYear << " et je suis l'Ã©tudiant numero " << Student::numero << " specialise en " << specialisation << " et en " << position << " avec le numero d'employe de " << AdminEmploye::numero << "." << std::endl;
+        std::cout << "Bonjour je suis " << firstname << " " << lastname << ". Je suis né en " << birthYear << " et je suis l'étudiant numero " << Student::numero << " specialise en " << specialisation << " et en " << position << " avec le numero d'employe de " << AdminEmploye::numero << "." << std::endl;
     }
 };
 

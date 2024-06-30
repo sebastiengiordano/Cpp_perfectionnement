@@ -69,13 +69,13 @@ public:
 
 int main() {
     int a = 10;
-    // 'r' est une rÃ©fÃ©rence de 'a'
+    // 'r' est une référence de 'a'
     int& r = a;
 
     std::cout << "r : " << r << std::endl;
 
     int b = 20;
-    // 'r' prend la valeur de 'b' mais ne devient pas une rÃ©fÃ©rence 'b'
+    // 'r' prend la valeur de 'b' mais ne devient pas une référence 'b'
     r = b;
 
     std::cout << "a : " << a << std::endl;

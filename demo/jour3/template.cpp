@@ -48,7 +48,7 @@ public:
     Derived(std::string v, int d) : Base<std::string>(v), data(d) { }
 
     void display() const {
-        std::cout << "SpÃ©cialisation totale : " << std::endl;
+        std::cout << "Spécialisation totale : " << std::endl;
         Base<std::string>::displayParent();
         std::cout << "Valeur de l'enfant : " << data << std::endl;
     }
@@ -64,7 +64,7 @@ int main() {
     Derived<int, int> obj1(10, 20);
     Derived<std::string, int> obj2("Specialisation totale", 20);
     Derived<int, std::string> obj3(40, "Template ");
-    Derived<int, std::string> obj3bis(30, "GÃ©nÃ©rique");
+    Derived<int, std::string> obj3bis(30, "Générique");
 
     obj1.display();
     auto value = obj2.getValue();

@@ -37,12 +37,12 @@ class ProxyArray {
             return intArray->size();
         }
 
-        // Affichage de l'adresse via une mÃ©thode "classique" :
+        // Affichage de l'adresse via une méthode "classique" :
         std::vector<int>* getAddress() const {
             return intArray;
         }
 
-        // Affichage de l'adresse Ã  travers la surcharge de l'opÃ©rateur "&" :
+        // Affichage de l'adresse Ã  travers la surcharge de l'opérateur "&" :
         std::vector<int>* operator&() const {
             return intArray;
         }

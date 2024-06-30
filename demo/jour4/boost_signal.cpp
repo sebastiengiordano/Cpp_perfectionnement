@@ -4,11 +4,11 @@
 // https://www.boost.org/doc/libs/1_83_0/doc/html/signals2/tutorial.html
 
 void slot1() {
-    std::cout << "Slot 1 appelÃ©" << std::endl;
+    std::cout << "Slot 1 appelé" << std::endl;
 }
 
 void slot2() {
-    std::cout << "Slot 2 appelÃ©" << std::endl;
+    std::cout << "Slot 2 appelé" << std::endl;
 }
 
 int main() {

@@ -44,7 +44,7 @@ public:
 
 };
 
-// ClassÃ© gÃ©nÃ©rique hÃ©ritant d'une autre classe gÃ©nÃ©rique
+// Classé générique héritant d'une autre classe générique
 template<typename T, typename U, typename V>
 class Sandwich : Snack<V> {
 protected:
@@ -85,7 +85,7 @@ public:
     }
 };
 
-// SpÃ©cialisation partielle
+// Spécialisation partielle
 template<typename T, typename U>
 class Sandwich<T, U, std::string> : Snack<std::string> {
 protected:
@@ -107,7 +107,7 @@ public:
     U getIngredient2() const { return ingredient2; }
 
     void display() const {
-        std::cout << "SpÃ©cialisation partielle : " << Snack<std::string>::getComposition() << std::endl;
+        std::cout << "Spécialisation partielle : " << Snack<std::string>::getComposition() << std::endl;
         std::cout << "Sandwich : " << ingredient1 << " et " << ingredient2 << std::endl;
     }
 
@@ -119,7 +119,7 @@ public:
     }
 };
 
-// SpÃ©cialisation totale
+// Spécialisation totale
 template<>
 class Sandwich<int, int, std::string> : Snack<std::string> {
 protected:
@@ -142,7 +142,7 @@ public:
     int getIngredient2() const { return ingredient2; }
 
     void display() const {
-        std::cout << "SpÃ©cialisation totale : " << Snack<std::string>::getComposition() << std::endl;
+        std::cout << "Spécialisation totale : " << Snack<std::string>::getComposition() << std::endl;
         std::cout << "Sandwich : " << ingredient1 << " et " << ingredient2 << std::endl;
     }
 

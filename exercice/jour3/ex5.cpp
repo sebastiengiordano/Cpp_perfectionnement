@@ -44,11 +44,11 @@ int main() {
 
     auto nbFound = std::find(numbers.begin(), numbers.end(), nbToFind);
     if (nbFound != numbers.end()) {
-        std::cout << "On a bien trouvÃ© le nombre " << nbToFind << std::endl;
+        std::cout << "On a bien trouvé le nombre " << nbToFind << std::endl;
     }
 
     std::size_t nbElements = numbers.size();
-    std::cout << "Le vecteur contient " << nbElements << " Ã©lÃ©ments." << std::endl;
+    std::cout << "Le vecteur contient " << nbElements << " éléments." << std::endl;
 
     copyVector.insert(copyVector.begin(), numbers.begin(), numbers.end());
     for (const auto& elem : copyVector) {

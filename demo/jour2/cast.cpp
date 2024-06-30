@@ -35,7 +35,7 @@ int main() {
     std::cout << (int)f << std::endl;
 
     // const_cast
-    // A n'utilisez qu'en cas d'absolue nÃ©cessitÃ©e (utilisation d'API legacy par exemple qui retournerait des structures ou des objets ne pouvant pas Ãªtre copiÃ©s  ...)   
+    // A n'utilisez qu'en cas d'absolue nécessitée (utilisation d'API legacy par exemple qui retournerait des structures ou des objets ne pouvant pas Ãªtre copiés  ...)   
     const int const_value = 10;
     int *newValue = const_cast<int*>(&const_value);
     std::cout << "const_value : " << const_value << " ; newValue : " << *newValue << std::endl;
@@ -60,12 +60,12 @@ int main() {
     double *my_double = new double(std::numeric_limits<double>::max());
     float *my_float = reinterpret_cast<float*>(my_double);
     std::cout << "Float : " << *my_float << std::endl;
-    // RÃ©sultat obtenu : nan
+    // Résultat obtenu : nan
 
     void *data = static_cast<void*>(my_double);
     my_float = static_cast<float*>(data);
     std::cout << "Float : " << *my_float << std::endl;
-    // RÃ©sultat obtenu : nan
+    // Résultat obtenu : nan
     
     delete(my_double);
 
@@ -101,12 +101,12 @@ int main() {
         // Dynamic_cast
         B derived;
 
-        // upcast : conversion d'une classe dÃ©rivÃ©e en classe de base
+        // upcast : conversion d'une classe dérivée en classe de base
         derived.doSomething();
         A *ptr = dynamic_cast<A*>(&derived);
         // A *ptr = static_cast<A*>(&derived);
         if (ptr) {
-            std::cout << "Conversion upcast rÃ©ussie" << std::endl;
+            std::cout << "Conversion upcast réussie" << std::endl;
             if (typeid(*ptr) == typeid(B))
                 std::cout << "ptr contient bien une classe de type B" << std::endl;
             if (typeid(ptr) == typeid(A*))
@@ -114,7 +114,7 @@ int main() {
             //ptr->doSomething();  => ne compile pas !
         }
 
-        // downcast : conversion d'une classe de base en classe dÃ©rivÃ©e
+        // downcast : conversion d'une classe de base en classe dérivée
         A *ptrBase = new B();
         //ptrBase->doSomething();     => ne compile toujours pas ! =(
 
@@ -122,7 +122,7 @@ int main() {
         if (ptrDerived != nullptr) {
             ptrDerived->doSomething();
         } else {
-            std::cout << "Conversion Ã©chouÃ©e ! " << std::endl;
+            std::cout << "Conversion échouée ! " << std::endl;
         }
     
     // Dans le cas d'une conversion dynamique, on a un risque d'exception de type bad_cast

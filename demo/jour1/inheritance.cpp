@@ -56,6 +56,7 @@ class D : public B, public C {
 
 int main() {
     D d;
+    C c;
     Rabbit lapin;
     lapin.eat();
 

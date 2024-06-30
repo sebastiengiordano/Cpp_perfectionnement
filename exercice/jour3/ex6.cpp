@@ -44,7 +44,7 @@ public:
 
     void displayListProduct() const {
         for (auto& product: listProducts) {
-            std::cout << "Id : " << product.getId() << ", nom : " << product.getName() << ", prix : " << product.getPrice() << ", quantitÃ© : " << product.getQuantity() << std::endl;
+            std::cout << "Id : " << product.getId() << ", nom : " << product.getName() << ", prix : " << product.getPrice() << ", quantité : " << product.getQuantity() << std::endl;
         }
     }
 
@@ -69,9 +69,9 @@ public:
         });
         if (it != listProducts.end()) {
             const Product& product = *it;
-            std::cout << "Id : " << product.getId() << ", nom : " << product.getName() << ", prix : " << product.getPrice() << ", quantitÃ© : " << product.getQuantity() << std::endl;
+            std::cout << "Id : " << product.getId() << ", nom : " << product.getName() << ", prix : " << product.getPrice() << ", quantité : " << product.getQuantity() << std::endl;
         } else {
-            std::cout << "Aucun produit trouvÃ© !" << std::endl;
+            std::cout << "Aucun produit trouvé !" << std::endl;
         }
     }
 
@@ -158,14 +158,14 @@ int main() {
     std::cout << "###  Affichage du produit ayant l'id 2 : " << std::endl;
     catalog.displayProductById(2);
 
-    std::cout << "### RÃ©cupÃ©ration des tomates : " << std::endl;
+    std::cout << "### Récupération des tomates : " << std::endl;
     Product *p = catalog.searchByName("machin");
     if (p != nullptr)
         p->display();
     else
         std::cout << "Produit introuvable !" << std::endl;
 
-    std::cout << "###  Modification de la quantitÃ© du produit ayant l'id 3 : " << std::endl;
+    std::cout << "###  Modification de la quantité du produit ayant l'id 3 : " << std::endl;
     catalog.updateQuantity(3, 8);
     catalog.displayProductById(3);
 

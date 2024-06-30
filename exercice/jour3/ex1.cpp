@@ -43,7 +43,7 @@ int main() {
     listeInt.addElement(84);
     listeInt.addElement(421);
     listeInt.displayElements();
-    std::cout << "Suppression d'un Ã©lÃ©ment : " << std::endl;
+    std::cout << "Suppression d'un élément : " << std::endl;
     listeInt.removeElement(421);
     listeInt.displayElements();
     std::cout << "Nettoyage de la liste : " << std::endl;
@@ -57,7 +57,7 @@ int main() {
     listeStr.addElement("Hi");
     listeStr.addElement("World");
     listeStr.displayElements();
-    std::cout << "Suppression d'un Ã©lÃ©ment : " << std::endl;
+    std::cout << "Suppression d'un élément : " << std::endl;
     listeStr.removeElement("World");
     listeStr.displayElements();
     std::cout << "Nettoyage de la liste : " << std::endl;
